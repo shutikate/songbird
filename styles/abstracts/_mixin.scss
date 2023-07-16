@@ -1,0 +1,116 @@
+@mixin flex-row() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin link() {
+  text-decoration: none;
+}
+
+@mixin list() {
+  list-style: none;
+}
+
+@mixin font-roboto() {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+
+@mixin font-open() {
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+@mixin size($size) {
+  font-size: $size;
+  font-weight: 600;
+}
+
+@mixin list-grid($num) {
+  display: grid;
+  grid-template-columns: repeat($num, 1fr);
+  grid-column-gap: 1px;
+  justify-self: center;
+  box-shadow: 4px 4px 4px #ebba82;
+  border-radius: 10px;
+  background-color: rgba(248, 241, 231, 0.7);
+}
+
+@mixin item-grid() {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 22px;
+  border-right: 1px solid #ebba82;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+@mixin play-pause-buttons($url) {
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  background: url($url) no-repeat;
+  background-size: 50px 50px;
+  cursor: pointer;
+}
+
+@mixin volume-mute-buttons($url) {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  background: url($url) no-repeat;
+  background-size: 30px 30px;
+  cursor: pointer;
+}
+
+@mixin image($width, $height) {
+  margin-right: 30px;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  box-sizing: border-box;
+}
+
+@mixin image-greeting($width, $height) {
+  position: absolute;
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+
+@mixin start-button() {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 26px;
+  font-weight: 600;
+  color: #383838;
+  border: none;
+  box-shadow: 5px 5px 5px #ebba82;
+  border-radius: 20px;
+  background-color: rgba(236, 215, 186, 0.8);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(201, 161, 108, 0.8);
+  }
+}
+
+@mixin main-wrapper() {
+  margin-top: 40px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: $background-color;
+  border-radius: $border-radius;
+  @include font-open();
+}
+
+
+

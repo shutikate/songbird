@@ -1,0 +1,23 @@
+.next-button {
+  padding: 10px;
+  width: 100%;
+  font-size: 26px;
+  font-weight: 600;
+  color: #383838;
+  border: none;
+  box-shadow: 5px 5px 5px #ebba82;
+  border-radius: 20px;
+  background-color: rgba(248, 241, 231, 0.8);
+  cursor: pointer;
+
+  @media screen and (max-width: 600px) {
+   font-size: 18px;
+  }
+}
+
+.next-button:disabled {
+  color: #bcb8b8;
+  box-shadow: 3px 3px 3px #787575;
+  border: none;
+  cursor:auto;
+}

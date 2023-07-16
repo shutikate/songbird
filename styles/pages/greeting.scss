@@ -1,0 +1,61 @@
+.greeting {
+  @include main-wrapper();
+
+  @media screen and (max-width: 1000px) {
+    padding: 20px 40px;
+  }
+}
+
+.image-wrapper {
+  margin-bottom: 70px;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
+}
+
+.greeting__button {
+  @include start-button();
+}
+
+.greeting__image {
+  flex-shrink: 0;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  animation: fade 3s linear infinite;
+  animation-delay: 1.5s;
+
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes fade {
+  0% { opacity: 1 }
+  50% { opacity: 0.6 }
+  100% { opacity: 1 }
+}
+
+.greeting__text {
+  @include font-open();
+  color: $color;
+  @include size(45px);
+  font-style: italic;
+  margin-left: 50px;
+  text-align: center;
+
+  @media screen and (max-width: 1000px) {
+    @include size(30px);
+    margin-left: 0;
+  }
+}
+
+
+
+
+

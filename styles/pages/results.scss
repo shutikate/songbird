@@ -1,0 +1,29 @@
+.results {
+  @include main-wrapper();
+}
+
+.results__congratulation {
+  font-size: 80px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 40px;
+  }
+}
+
+.results__text {
+  margin-bottom: 80px;
+  text-align: center;
+  @include size(28px);
+
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+.results__button {
+  @include start-button();
+
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  }
+}

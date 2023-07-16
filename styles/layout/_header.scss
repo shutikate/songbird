@@ -1,0 +1,48 @@
+.header {
+  padding-top: 10px;
+  @include flex-row();
+  justify-content: space-between;
+}
+
+.header__logo {
+  @include flex-row();
+  @include font-open();
+  flex-basis: 20%;
+
+  @media screen and (max-width: 768px) {
+    flex-basis: auto;
+  }
+}
+
+.header__navigation {
+  flex-basis: 60%;
+}
+
+.logo__img {
+  margin-right: 10px;
+  width: 50px;
+}
+
+.logo__name {
+  font-size: 40px;
+  font-weight: 600;
+  color: #383838;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.logo_color {
+  color: #c38d36;
+}
+
+.header__language {
+  padding: 5px 10px;
+  @include font-open();
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: rgba(248, 241, 231, 0.9);
+  border-radius: 50%;
+}
